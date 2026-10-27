@@ -12,7 +12,9 @@ namespace FlyweightFourmis
         public override void Agir()
         {
             //Surveiller les intrus
-            Console.WriteLine("Le garde a repoussé 8 intrus!");
+            Random nbrIntrus = new Random();
+            int intrusRepousses = nbrIntrus.Next(0, 6);
+            Console.WriteLine($"Le garde {(intrusRepousses == 0 ? "reste proche de la reine et attentif" : "a repoussé " + intrusRepousses + " intrus !")}");
         }
     }
 }

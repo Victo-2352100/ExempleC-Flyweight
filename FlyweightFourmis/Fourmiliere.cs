@@ -10,13 +10,15 @@ namespace FlyweightFourmis
     public class Fourmiliere
     {
         public List<FourmiSimulee> fourmisSimulees;
-        private Fourmi[] fourmis;
+        private List<Fourmi> fourmis;
         /// <summary>
         /// Méthode qui crée une nouvelle fourmi à sa naissance
         /// </summary>
         /// <returns>La nouvelle fourmi</returns>
         public FourmiSimulee NaissanceFourmi(int indexModele)
         {
+            if (fourmisSimulees == null)
+                fourmisSimulees = new List<FourmiSimulee>();
             FourmiSimulee fourmiNee = new FourmiSimulee(fourmis[indexModele], 3, 5);
             fourmisSimulees.Add(fourmiNee);
             return fourmiNee;
@@ -38,6 +40,15 @@ namespace FlyweightFourmis
             }
             
             return fourmiChoisie;
+        }
+
+        public void AjouterFourmi(double taille, Color couleur, TypeFourmi type)
+        {
+            if (fourmis == null)
+            {
+                fourmis = new List<Fourmi>();
+            }
+            fourmis.Add(new Fourmi(taille, couleur, type));
         }
     }
 }

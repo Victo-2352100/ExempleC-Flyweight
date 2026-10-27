@@ -21,6 +21,10 @@ namespace FlyweightFourmis
         {
             return fourmi.GetCouleur();
         }
+        public TypeFourmi GetTypeFourmi() 
+        {
+            return fourmi.GetType();
+        }
         public FourmiSimulee(Fourmi fourmi, int niveauFaim, int niveauSante)
         {
             this.fourmi = fourmi;

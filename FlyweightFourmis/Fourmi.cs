@@ -11,11 +11,13 @@ namespace FlyweightFourmis
     {
         private double taille;
         private Color couleur;
+        private TypeFourmi type;
         //public TypeFourmis type;
-        public Fourmi(double taille, Color couleur)
+        public Fourmi(double taille, Color couleur, TypeFourmi type)
         {
             this.taille = taille;
             this.couleur = couleur;
+            this.type = type;
         }
         public Color GetCouleur()
         {
@@ -24,6 +26,14 @@ namespace FlyweightFourmis
         public double GetTaille()
         {
             return taille;
+        }
+        public TypeFourmi GetType()
+        {
+            return type;
+        }
+        public void Agir()
+        {
+            type.Agir();
         }
     }
 }

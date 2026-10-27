@@ -13,8 +13,8 @@ namespace FlyweightFourmis
         {
             //Pondre des oeufs
             Random nbrOeufs = new Random();
-            nbrOeufs.Next(6, 24);
-            Console.WriteLine($"La reine a pondu {nbrOeufs} oeufs!");
+            int oeufs = nbrOeufs.Next(6, 24);
+            Console.WriteLine($"La reine a pondu {oeufs} oeufs!");
         }
     }
 }
