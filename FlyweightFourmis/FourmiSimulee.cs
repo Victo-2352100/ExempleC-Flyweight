@@ -10,6 +10,7 @@ namespace FlyweightFourmis
     public class FourmiSimulee
     {
         private Fourmi fourmi;
+        double[] position = {0,0,0};
         private int niveauFaim;
         private int niveauSante;
 
@@ -23,9 +24,9 @@ namespace FlyweightFourmis
         }
         public TypeFourmi GetTypeFourmi() 
         {
-            return fourmi.GetType();
+            return fourmi.GetTypeFourmi();
         }
-        public FourmiSimulee(Fourmi fourmi, int niveauFaim, int niveauSante)
+        public FourmiSimulee(Fourmi fourmi,double[] position, int niveauFaim, int niveauSante)
         {
             this.fourmi = fourmi;
             this.niveauFaim = niveauFaim;

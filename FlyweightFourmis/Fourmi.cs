@@ -27,7 +27,7 @@ namespace FlyweightFourmis
         {
             return taille;
         }
-        public TypeFourmi GetType()
+        public TypeFourmi GetTypeFourmi()
         {
             return type;
         }

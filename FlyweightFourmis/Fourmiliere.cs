@@ -19,7 +19,8 @@ namespace FlyweightFourmis
         {
             if (fourmisSimulees == null)
                 fourmisSimulees = new List<FourmiSimulee>();
-            FourmiSimulee fourmiNee = new FourmiSimulee(fourmis[indexModele], 3, 5);
+            double[] positionFourmi = { 0, 0, 0 };
+            FourmiSimulee fourmiNee = new FourmiSimulee(fourmis[indexModele],positionFourmi , 3, 5);
             fourmisSimulees.Add(fourmiNee);
             return fourmiNee;
         }
